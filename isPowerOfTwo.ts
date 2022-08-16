@@ -14,5 +14,16 @@ const isPowerOfTwo = (num: number) => {
   return true;
 };
 
+const isPowerOfTwoBinary = (num: number) => {
+  if (num < 1) {
+    return false;
+  }
+
+  return (num & (num - 1)) === 0;
+};
+
 console.log(isPowerOfTwo(7));
 console.log(isPowerOfTwo(32));
+
+console.log(isPowerOfTwoBinary(7));
+console.log(isPowerOfTwoBinary(32));
