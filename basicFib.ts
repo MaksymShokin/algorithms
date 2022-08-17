@@ -5,6 +5,7 @@ const fib = (n: number): number => {
 
   return fib(n - 2) + fib(n - 1);
 };
+// O(2N) exponential
 
 const fib2 = (n: number): number => {
   let sum = 2;
