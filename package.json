@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "deno run basicFib.ts",
+    "start": "deno run cartesianProduct.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
