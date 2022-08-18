@@ -1,7 +1,12 @@
+// @ts-nocheck
+
 const cartProduct = (setA: string[], setB: string[]) => {
   const product = [] as string[][];
 
   for (let setAEl of setA) {
+    if (!Array.isArray(setAEl)) {
+      setAEl = [setAEl];
+    }
     for (const setBEl of setB) {
       product.push([...setAEl, setBEl]);
     }
@@ -10,7 +15,7 @@ const cartProduct = (setA: string[], setB: string[]) => {
   return product;
 };
 
-function cartesian(...sets) {
+const cartesian = (...sets: any[]) => {
   let tempProduct = sets[0];
 
   for (let i = 1; i < sets.length; i++) {
@@ -18,7 +23,7 @@ function cartesian(...sets) {
   }
 
   return tempProduct;
-}
+};
 
 const colors = ['blue', 'red'];
 const sizes = ['s', 'm', 'l', 'xl'];
